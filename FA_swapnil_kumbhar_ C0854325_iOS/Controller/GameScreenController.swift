@@ -12,6 +12,7 @@ class GameScreenController: UIViewController {
     var board = Board(player1: Player(name: "Player 1", sign: PLAYER_SIGN.CRICLE), player2: Player(name: "Player 2", sign: PLAYER_SIGN.CROSS))
     
     
+    @IBOutlet weak var winnerName: UILabel!
     @IBOutlet weak var place1: SignView!
     @IBOutlet weak var place2: SignView!
     @IBOutlet weak var place3: SignView!
@@ -21,8 +22,11 @@ class GameScreenController: UIViewController {
     @IBOutlet weak var place7: SignView!
     @IBOutlet weak var place8: SignView!
     @IBOutlet weak var place9: SignView!
+    @IBOutlet weak var winnerModalBg: UIView!
+    @IBOutlet weak var winnerModal: UIView!
     
     override func viewDidLoad() {
+        winnerModalBg.alpha = 0;
         super.viewDidLoad()
         
         initilizeSignView(signView: place1, positionX: 0, positionY: 0)
@@ -47,6 +51,19 @@ class GameScreenController: UIViewController {
         
     }
     
+    func openWinningModdal() {
+        winnerModalBg.alpha = 0;
+        let y = winnerModal.frame.origin.y;
+        winnerModal.frame.origin.y = winnerModalBg.frame.height + 100;
+        UIView.animate(withDuration: 0.5, animations: {
+            self.winnerModalBg.alpha = 1
+        }, completion: { finished in
+            UIView.animate(withDuration: 0.5, delay: 0, options: .curveEaseIn, animations: {
+                self.winnerModal.frame.origin.y = y;
+            })
+        });
+    }
+    
     @objc func placeClickListner(tapRecongnizer: UITapGestureRecognizer) {
         if let view = tapRecongnizer.view as? SignView {
             if board.play(positionX: view.positionX, positionY: view.positionY) {
@@ -54,7 +71,8 @@ class GameScreenController: UIViewController {
                 board.checkResult()
                 board.switchPlayer()
                 if let w = board.winner {
-                    print(w);
+                    winnerName.text = w.name
+                    openWinningModdal();
                 }
                 return
             }

@@ -187,7 +187,7 @@
                                                 <rect key="frame" x="217" y="253" width="95" height="79"/>
                                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-LR-8I7">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Player 1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwC-LR-8I7" userLabel="winner_name">
                                                 <rect key="frame" x="0.0" y="151" width="354" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="40"/>
@@ -217,6 +217,9 @@
                         <outlet property="place7" destination="gJr-YG-Lu7" id="gqh-Dv-Vtz"/>
                         <outlet property="place8" destination="ZEw-Bx-aGl" id="V2Q-ON-PVP"/>
                         <outlet property="place9" destination="J8v-p9-YXg" id="bIu-15-ZXY"/>
+                        <outlet property="winnerModal" destination="Bh9-Bt-hZH" id="YlU-bT-lTF"/>
+                        <outlet property="winnerModalBg" destination="pbt-ur-NZV" id="qjK-sJ-tLi"/>
+                        <outlet property="winnerName" destination="DwC-LR-8I7" id="592-7Y-vKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRE-tN-2L9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
