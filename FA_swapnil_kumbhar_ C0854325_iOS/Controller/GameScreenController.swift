@@ -9,39 +9,12 @@ import UIKit
 
 class GameScreenController: UIViewController {
 
-    @IBOutlet weak var place1: UIImageView!
-    @IBOutlet weak var place2: UIImageView!
-    @IBOutlet weak var place3: UIImageView!
-    @IBOutlet weak var place4: UIImageView!
-    @IBOutlet weak var place5: UIImageView!
-    @IBOutlet weak var place6: UIImageView!
-    @IBOutlet weak var place7: UIImageView!
-    @IBOutlet weak var place8: UIImageView!
-    @IBOutlet weak var place9: UIImageView!
-    
+    @IBOutlet weak var place1: SignView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        
-        place1.addGestureRecognizer(setTapGestureRecognizer());
-        place2.addGestureRecognizer(setTapGestureRecognizer());
-        place3.addGestureRecognizer(setTapGestureRecognizer());
-        place4.addGestureRecognizer(setTapGestureRecognizer());
-        place5.addGestureRecognizer(setTapGestureRecognizer());
-        place6.addGestureRecognizer(setTapGestureRecognizer());
-        place7.addGestureRecognizer(setTapGestureRecognizer());
-        place8.addGestureRecognizer(setTapGestureRecognizer());
-        place9.addGestureRecognizer(setTapGestureRecognizer());
-                                                    
-    }
-    
-    func setTapGestureRecognizer() -> UITapGestureRecognizer {
-        return UITapGestureRecognizer(target: self, action: #selector(placeClickListner))
-    }
-    
-    @objc func placeClickListner(tapRecongnizer: UITapGestureRecognizer) {
-        print(tapRecongnizer.view?.tag);
+        place1.player_sign = PLAYER_SIGN.CRICLE;
     }
     
 

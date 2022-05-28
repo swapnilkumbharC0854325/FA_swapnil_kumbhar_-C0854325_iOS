@@ -17,6 +17,7 @@
 		55A4B0712841AF8800941E1B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0702841AF8800941E1B /* Board.swift */; };
 		55A4B0732841AFA200941E1B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0722841AFA200941E1B /* Player.swift */; };
 		55A4B0752841B51E00941E1B /* GameScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0742841B51E00941E1B /* GameScreenController.swift */; };
+		55A4B07F2841D84300941E1B /* SignView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B07E2841D84300941E1B /* SignView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		55A4B0702841AF8800941E1B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
 		55A4B0722841AFA200941E1B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		55A4B0742841B51E00941E1B /* GameScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenController.swift; sourceTree = "<group>"; };
+		55A4B07E2841D84300941E1B /* SignView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			children = (
 				55A4B05A284197E100941E1B /* Main.storyboard */,
 				55A4B062284197E300941E1B /* LaunchScreen.storyboard */,
+				55A4B07E2841D84300941E1B /* SignView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -179,6 +182,7 @@
 				55A4B059284197E100941E1B /* ViewController.swift in Sources */,
 				55A4B0712841AF8800941E1B /* Board.swift in Sources */,
 				55A4B055284197E100941E1B /* AppDelegate.swift in Sources */,
+				55A4B07F2841D84300941E1B /* SignView.swift in Sources */,
 				55A4B0732841AFA200941E1B /* Player.swift in Sources */,
 				55A4B057284197E100941E1B /* SceneDelegate.swift in Sources */,
 			);

@@ -7,10 +7,18 @@
 
 import Foundation
 
+enum PLAYER_SIGN {
+    case NONE
+    case CROSS
+    case CRICLE
+}
+
 class Player {
     var name: String;
+    var sign: PLAYER_SIGN;
     
-    init(name: String) {
+    init(name: String, sign: PLAYER_SIGN) {
         self.name = name;
+        self.sign = sign;
     }
 }

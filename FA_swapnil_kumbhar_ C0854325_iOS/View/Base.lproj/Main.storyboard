@@ -96,42 +96,6 @@
                                 <rect key="frame" x="-10" y="0.0" width="448" height="926"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="NqF-e8-BF2" userLabel="place_1">
-                                <rect key="frame" x="35" y="284" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="2" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="PQJ-k2-kc5" userLabel="place_2">
-                                <rect key="frame" x="157" y="284" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="3" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="qKd-0I-A6N" userLabel="place_3">
-                                <rect key="frame" x="279" y="284" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="4" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="IHi-LA-oOC" userLabel="place_4">
-                                <rect key="frame" x="35" y="406" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="5" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="xyy-ci-H5k" userLabel="place_5">
-                                <rect key="frame" x="157" y="406" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="6" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="SpP-4f-CaN" userLabel="place_6">
-                                <rect key="frame" x="279" y="406" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="7" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="np4-Au-qDv" userLabel="place_7">
-                                <rect key="frame" x="35" y="528" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="8" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="axp-02-Cf0" userLabel="place_8">
-                                <rect key="frame" x="157" y="528" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" tag="9" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card_bg" translatesAutoresizingMaskIntoConstraints="NO" id="zZ5-jN-I5b" userLabel="place_9">
-                                <rect key="frame" x="279" y="528" width="114" height="114"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                            </imageView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Player 1" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-0d-Nwg" userLabel="player_1_name">
                                 <rect key="frame" x="94" y="85" width="240" height="53"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,6 +110,51 @@
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oh0-Wr-CxQ" userLabel="place_1" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="35" y="284" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wb4-9j-HeR" userLabel="place_2" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="157" y="284" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9yP-uY-nWp" userLabel="place_3" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="279" y="284" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="w7u-30-wCl" userLabel="place_4" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="35" y="406" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3nx-yV-yAo" userLabel="place_5" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="157" y="406" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="g4j-ze-yf4" userLabel="place_6" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="279" y="406" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gJr-YG-Lu7" userLabel="place_7" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="35" y="528" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZEw-Bx-aGl" userLabel="place_8" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="157" y="528" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J8v-p9-YXg" userLabel="place_9" customClass="SignView" customModule="FA_swapnil_kumbhar__C0854325_iOS" customModuleProvider="target">
+                                <rect key="frame" x="279" y="528" width="114" height="114"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MKL-vQ-8fq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -154,15 +163,7 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="place1" destination="NqF-e8-BF2" id="ANe-N2-HqK"/>
-                        <outlet property="place2" destination="PQJ-k2-kc5" id="1tD-1q-tHR"/>
-                        <outlet property="place3" destination="qKd-0I-A6N" id="fQD-Nr-Imp"/>
-                        <outlet property="place4" destination="IHi-LA-oOC" id="b6H-m2-cmy"/>
-                        <outlet property="place5" destination="xyy-ci-H5k" id="BDD-c7-QjX"/>
-                        <outlet property="place6" destination="SpP-4f-CaN" id="Mg6-mr-wEO"/>
-                        <outlet property="place7" destination="np4-Au-qDv" id="VIC-ny-uQD"/>
-                        <outlet property="place8" destination="axp-02-Cf0" id="Vis-Ou-ZYI"/>
-                        <outlet property="place9" destination="zZ5-jN-I5b" id="MRB-18-7gW"/>
+                        <outlet property="place1" destination="oh0-Wr-CxQ" id="aCd-68-aKC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRE-tN-2L9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -193,7 +194,6 @@
         <image name="avatar_1" width="736" height="736"/>
         <image name="avatar_6" width="736" height="736"/>
         <image name="button_bg" width="872" height="286"/>
-        <image name="card_bg" width="487" height="512"/>
         <image name="vs" width="240" height="240"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
