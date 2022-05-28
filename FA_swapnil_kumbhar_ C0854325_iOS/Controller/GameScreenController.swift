@@ -9,7 +9,6 @@ import UIKit
 
 class GameScreenController: UIViewController {
     
-    var currentPlayer: Player?;
     var board = Board(player1: Player(name: "Player 1", sign: PLAYER_SIGN.CRICLE), player2: Player(name: "Player 2", sign: PLAYER_SIGN.CROSS))
     
     
@@ -26,7 +25,6 @@ class GameScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        currentPlayer = board.player1;
         initilizeSignView(signView: place1, positionX: 0, positionY: 0)
         initilizeSignView(signView: place2, positionX: 1, positionY: 0)
         initilizeSignView(signView: place3, positionX: 2, positionY: 0)
@@ -37,7 +35,7 @@ class GameScreenController: UIViewController {
         
         initilizeSignView(signView: place7, positionX: 0, positionY: 2)
         initilizeSignView(signView: place8, positionX: 1, positionY: 2)
-        initilizeSignView(signView: place9, positionX: 2, positionY: 3)
+        initilizeSignView(signView: place9, positionX: 2, positionY: 2)
     }
     
     func initilizeSignView(signView: SignView, positionX: Int, positionY: Int) {
@@ -49,21 +47,17 @@ class GameScreenController: UIViewController {
         
     }
     
-    func switchPlayer() {
-        if currentPlayer?.sign == board.player1.sign {
-            currentPlayer = board.player2
-        } else {
-            currentPlayer = board.player1
-        }
-    }
-    
     @objc func placeClickListner(tapRecongnizer: UITapGestureRecognizer) {
         if let view = tapRecongnizer.view as? SignView {
-            if view.player_sign != PLAYER_SIGN.NONE {
+            if board.play(positionX: view.positionX, positionY: view.positionY) {
+                view.player_sign = board.currentPlayer.sign;
+                board.checkResult()
+                board.switchPlayer()
+                if let w = board.winner {
+                    print(w);
+                }
                 return
             }
-            view.player_sign = currentPlayer!.sign;
-            switchPlayer()
         }
     }
     /*

@@ -13,7 +13,7 @@ enum PLAYER_SIGN {
     case CRICLE
 }
 
-class Player {
+class Player: NSObject {
     var name: String;
     var sign: PLAYER_SIGN;
     
@@ -21,4 +21,6 @@ class Player {
         self.name = name;
         self.sign = sign;
     }
+    
+    override var description: String { return "Player Name: \(name)" }
 }
