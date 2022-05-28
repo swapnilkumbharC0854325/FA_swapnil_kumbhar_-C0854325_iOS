@@ -14,6 +14,9 @@
 		55A4B05F284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B05D284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld */; };
 		55A4B061284197E300941E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A4B060284197E300941E1B /* Assets.xcassets */; };
 		55A4B064284197E300941E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A4B062284197E300941E1B /* LaunchScreen.storyboard */; };
+		55A4B0712841AF8800941E1B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0702841AF8800941E1B /* Board.swift */; };
+		55A4B0732841AFA200941E1B /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0722841AFA200941E1B /* Player.swift */; };
+		55A4B0752841B51E00941E1B /* GameScreenController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0742841B51E00941E1B /* GameScreenController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		55A4B060284197E300941E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55A4B063284197E300941E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55A4B065284197E300941E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		55A4B0702841AF8800941E1B /* Board.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Board.swift; sourceTree = "<group>"; };
+		55A4B0722841AFA200941E1B /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
+		55A4B0742841B51E00941E1B /* GameScreenController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScreenController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +79,8 @@
 		55A4B06B2841988300941E1B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				55A4B0702841AF8800941E1B /* Board.swift */,
+				55A4B0722841AFA200941E1B /* Player.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -90,6 +98,7 @@
 			isa = PBXGroup;
 			children = (
 				55A4B058284197E100941E1B /* ViewController.swift */,
+				55A4B0742841B51E00941E1B /* GameScreenController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -166,8 +175,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55A4B05F284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld in Sources */,
+				55A4B0752841B51E00941E1B /* GameScreenController.swift in Sources */,
 				55A4B059284197E100941E1B /* ViewController.swift in Sources */,
+				55A4B0712841AF8800941E1B /* Board.swift in Sources */,
 				55A4B055284197E100941E1B /* AppDelegate.swift in Sources */,
+				55A4B0732841AFA200941E1B /* Player.swift in Sources */,
 				55A4B057284197E100941E1B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
