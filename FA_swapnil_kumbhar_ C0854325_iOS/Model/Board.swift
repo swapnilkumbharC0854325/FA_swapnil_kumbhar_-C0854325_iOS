@@ -25,6 +25,7 @@ class Board {
     private var counter = 0;
     var lastMoveX: Int?;
     var lastMoveY: Int?;
+    var isUndoAllowed = true;
     
     init(player1: Player, player2: Player) {
         self.player1 = player1;
@@ -53,14 +54,21 @@ class Board {
             lastMoveX = positionX;
             lastMoveY = positionY;
             counter += 1;
+            isUndoAllowed = true;
             return true;
         }
         return false
     }
     
-    func undo() {
+    func undo(view: SignView) {
+        if (isUndoAllowed == false) {
+            return
+        }
         if (counter != 0 && state == .PLAYING) {
             self.slots[lastMoveX!][lastMoveY!] = .NONE;
+            isUndoAllowed = false;
+            view.player_sign = .NONE
+            counter -= 1;
             switchPlayer();
         }
     }

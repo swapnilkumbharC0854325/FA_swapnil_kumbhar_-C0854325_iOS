@@ -21,6 +21,7 @@ class GameScreenController: UIViewController {
     @IBOutlet weak var place8: SignView!
     @IBOutlet weak var place9: SignView!
     @IBOutlet weak var scoreLabel: UILabel!
+    var lastMoveXSignView: SignView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
@@ -42,6 +43,13 @@ class GameScreenController: UIViewController {
         
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeGestureAction))
         self.view.addGestureRecognizer(swipeGesture);
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("Shaked")
+            board.undo(view: lastMoveXSignView);
+        }
     }
     
     @objc func swipeGestureAction(swipeGesture: UISwipeGestureRecognizer) {
@@ -77,6 +85,7 @@ class GameScreenController: UIViewController {
     @objc func placeClickListner(tapRecongnizer: UITapGestureRecognizer) {
         if let view = tapRecongnizer.view as? SignView {
             if board.play(positionX: view.positionX, positionY: view.positionY) {
+                lastMoveXSignView = view
                 view.player_sign = board.currentPlayer.sign;
                 board.checkResult()
                 board.switchPlayer()
