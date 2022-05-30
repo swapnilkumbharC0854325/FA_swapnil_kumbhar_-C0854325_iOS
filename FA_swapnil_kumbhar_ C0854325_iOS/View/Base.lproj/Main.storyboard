@@ -88,14 +88,14 @@
                                 <rect key="frame" x="-10" y="0.0" width="448" height="926"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Player 1" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-0d-Nwg" userLabel="player_1_name">
-                                <rect key="frame" x="20" y="86" width="187" height="53"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Player 1" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Dh-Sh-PSB" userLabel="player_1_name">
+                                <rect key="frame" x="20" y="86" width="193" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" text="Player 2" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-Jg-8iL" userLabel="player_2_name">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="Player 2" textAlignment="right" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aZ1-Jg-8iL" userLabel="player_2_name">
                                 <rect key="frame" x="215" y="86" width="193" height="54"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -155,6 +155,24 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="winnerName" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G7s-rm-qKn">
+                                <rect key="frame" x="20" y="687" width="388" height="46"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="35"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="highlightedColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" bounces="NO" scrollEnabled="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I4m-0d-Nwg" userLabel="note">
+                                <rect key="frame" x="35" y="741" width="358" height="113"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <string key="text">Note : 
+1. Swpie for reset if game is finished
+2. Shake devide for undo</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="MarkerFelt-Wide" family="Marker Felt" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MKL-vQ-8fq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -173,6 +191,7 @@
                         <outlet property="place8" destination="ZEw-Bx-aGl" id="V2Q-ON-PVP"/>
                         <outlet property="place9" destination="J8v-p9-YXg" id="bIu-15-ZXY"/>
                         <outlet property="scoreLabel" destination="UmQ-bQ-P7Y" id="xEp-xz-6vV"/>
+                        <outlet property="winnerName" destination="G7s-rm-qKn" id="yab-tC-am7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRE-tN-2L9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

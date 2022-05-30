@@ -21,22 +21,23 @@ class GameScreenController: UIViewController {
     @IBOutlet weak var place8: SignView!
     @IBOutlet weak var place9: SignView!
     @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet weak var winnerName: UILabel!
     var lastMoveXSignView: SignView!
     
     override func viewDidLoad() {
         super.viewDidLoad();
         
-         initilizeSignView(signView: place1, positionX: 0, positionY: 0)
-         initilizeSignView(signView: place2, positionX: 1, positionY: 0)
-         initilizeSignView(signView: place3, positionX: 2, positionY: 0)
+        initilizeSignView(signView: place1, positionX: 0, positionY: 0)
+        initilizeSignView(signView: place2, positionX: 1, positionY: 0)
+        initilizeSignView(signView: place3, positionX: 2, positionY: 0)
+        
+        initilizeSignView(signView: place4, positionX: 0, positionY: 1)
+        initilizeSignView(signView: place5, positionX: 1, positionY: 1)
+        initilizeSignView(signView: place6, positionX: 2, positionY: 1)
          
-         initilizeSignView(signView: place4, positionX: 0, positionY: 1)
-         initilizeSignView(signView: place5, positionX: 1, positionY: 1)
-         initilizeSignView(signView: place6, positionX: 2, positionY: 1)
-         
-         initilizeSignView(signView: place7, positionX: 0, positionY: 2)
-         initilizeSignView(signView: place8, positionX: 1, positionY: 2)
-         initilizeSignView(signView: place9, positionX: 2, positionY: 2)
+        initilizeSignView(signView: place7, positionX: 0, positionY: 2)
+        initilizeSignView(signView: place8, positionX: 1, positionY: 2)
+        initilizeSignView(signView: place9, positionX: 2, positionY: 2)
          
         initializeGame();
         scoreLabel.text = String(board.playerOneScore) + "-" + String(board.playerTwoScore);
@@ -47,13 +48,11 @@ class GameScreenController: UIViewController {
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            print("Shaked")
             board.undo(view: lastMoveXSignView);
         }
     }
     
     @objc func swipeGestureAction(swipeGesture: UISwipeGestureRecognizer) {
-        print("Triggered")
         if swipeGesture.state == .ended {
             if board.state != GAME_STATE.PLAYING {
                 initializeGame();
@@ -72,6 +71,7 @@ class GameScreenController: UIViewController {
         place8.player_sign = PLAYER_SIGN.NONE;
         place9.player_sign = PLAYER_SIGN.NONE;
         board.reset()
+        winnerName.text = "";
     }
     
     func initilizeSignView(signView: SignView, positionX: Int, positionY: Int) {
@@ -91,7 +91,10 @@ class GameScreenController: UIViewController {
                 board.switchPlayer()
                 if board.winner != nil {
                     scoreLabel.text = String(board.playerOneScore) + "-" + String(board.playerTwoScore);
-//                    openWinningModdal();
+                    winnerName.text = board.winner!.name + " won";
+                }
+                if board.state == .TIE {
+                    winnerName.text = "Draw";
                 }
                 return
             }
