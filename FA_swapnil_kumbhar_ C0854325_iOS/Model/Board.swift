@@ -20,6 +20,8 @@ class Board {
     var winner: Player?;
     var currentPlayer: Player;
     var state: GAME_STATE;
+    var playerOneScore = 0;
+    var playerTwoScore = 0;
     private var counter = 0;
     
     init(player1: Player, player2: Player) {
@@ -27,6 +29,14 @@ class Board {
         self.player2 = player2;
         self.currentPlayer = player1;
         self.state = GAME_STATE.PLAYING;
+    }
+    
+    func reset() {
+        slots = Array(repeating: Array(repeating: PLAYER_SIGN.NONE, count: 3), count: 3);
+        self.currentPlayer = player1;
+        self.state = GAME_STATE.PLAYING;
+        self.winner = nil;
+        self.counter = 0;
     }
     
     func play(positionX: Int, positionY: Int) -> Bool {
@@ -50,6 +60,7 @@ class Board {
             if (isEqual(a: slots[i][0], b: slots[i][1], c: slots[i][2])) {
                 winner = currentPlayer;
                 self.state = GAME_STATE.FINISHED;
+                incrementScore();
                 return;
             }
         }
@@ -59,6 +70,7 @@ class Board {
             if (isEqual(a: slots[0][i], b: slots[1][i], c: slots[2][i])) {
                 winner = currentPlayer;
                 self.state = GAME_STATE.FINISHED;
+                incrementScore();
                 return;
             }
         }
@@ -67,6 +79,7 @@ class Board {
         if (isEqual(a: slots[0][0], b: slots[1][1], c: slots[2][2])) {
             winner = currentPlayer;
             self.state = GAME_STATE.FINISHED;
+            incrementScore();
             return;
         }
         
@@ -74,6 +87,7 @@ class Board {
         if (isEqual(a: slots[0][2], b: slots[1][1], c: slots[2][0])) {
             winner = currentPlayer;
             self.state = GAME_STATE.FINISHED;
+            incrementScore();
             return;
         }
         
@@ -95,6 +109,17 @@ class Board {
             currentPlayer = player2
         } else {
             currentPlayer = player1
+        }
+    }
+    
+    func incrementScore() {
+        if (self.state != GAME_STATE.FINISHED) {
+            return
+        }
+        if currentPlayer.sign == player1.sign {
+            playerOneScore += 1
+        } else {
+            playerTwoScore += 1
         }
     }
 }
