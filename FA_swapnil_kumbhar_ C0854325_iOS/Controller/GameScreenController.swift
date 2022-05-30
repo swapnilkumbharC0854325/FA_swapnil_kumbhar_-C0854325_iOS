@@ -9,8 +9,12 @@ import UIKit
 
 class GameScreenController: UIViewController {
     
-    let board = Board(player1: Player(name: "Player 1", sign: PLAYER_SIGN.CRICLE), player2: Player(name: "Player 2", sign: PLAYER_SIGN.CROSS))
+    var board: Board?;
     
+    @IBOutlet weak var playerOneName: UITextView!
+    @IBOutlet weak var playerTwoName: UITextView!
+    var playerOneNameLabel = "";
+    var playerTwoNameLabel = "";
     @IBOutlet weak var place1: SignView!
     @IBOutlet weak var place2: SignView!
     @IBOutlet weak var place3: SignView!
@@ -27,6 +31,10 @@ class GameScreenController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad();
         
+        board = Board(player1: Player(name: playerOneNameLabel, sign: PLAYER_SIGN.CRICLE), player2: Player(name: playerTwoNameLabel, sign: PLAYER_SIGN.CROSS));
+        playerTwoName.text = playerTwoNameLabel;
+        playerOneName.text = playerOneNameLabel;
+        
         initilizeSignView(signView: place1, positionX: 0, positionY: 0)
         initilizeSignView(signView: place2, positionX: 1, positionY: 0)
         initilizeSignView(signView: place3, positionX: 2, positionY: 0)
@@ -40,7 +48,7 @@ class GameScreenController: UIViewController {
         initilizeSignView(signView: place9, positionX: 2, positionY: 2)
          
         initializeGame();
-        scoreLabel.text = String(board.playerOneScore) + "-" + String(board.playerTwoScore);
+        scoreLabel.text = String(board!.playerOneScore) + "-" + String(board!.playerTwoScore);
         
         let swipeGesture = UISwipeGestureRecognizer(target: self, action: #selector(swipeGestureAction))
         self.view.addGestureRecognizer(swipeGesture);
@@ -48,13 +56,13 @@ class GameScreenController: UIViewController {
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if motion == .motionShake {
-            board.undo(view: lastMoveXSignView);
+            board!.undo(view: lastMoveXSignView);
         }
     }
     
     @objc func swipeGestureAction(swipeGesture: UISwipeGestureRecognizer) {
         if swipeGesture.state == .ended {
-            if board.state != GAME_STATE.PLAYING {
+            if board!.state != GAME_STATE.PLAYING {
                 initializeGame();
             }
         }
@@ -70,7 +78,7 @@ class GameScreenController: UIViewController {
         place7.player_sign = PLAYER_SIGN.NONE;
         place8.player_sign = PLAYER_SIGN.NONE;
         place9.player_sign = PLAYER_SIGN.NONE;
-        board.reset()
+        board!.reset()
         winnerName.text = "";
     }
     
@@ -84,16 +92,16 @@ class GameScreenController: UIViewController {
     
     @objc func placeClickListner(tapRecongnizer: UITapGestureRecognizer) {
         if let view = tapRecongnizer.view as? SignView {
-            if board.play(positionX: view.positionX, positionY: view.positionY) {
+            if board!.play(positionX: view.positionX, positionY: view.positionY) {
                 lastMoveXSignView = view
-                view.player_sign = board.currentPlayer.sign;
-                board.checkResult()
-                board.switchPlayer()
-                if board.winner != nil {
-                    scoreLabel.text = String(board.playerOneScore) + "-" + String(board.playerTwoScore);
-                    winnerName.text = board.winner!.name + " won";
+                view.player_sign = board!.currentPlayer.sign;
+                board!.checkResult()
+                board!.switchPlayer()
+                if board!.winner != nil {
+                    scoreLabel.text = String(board!.playerOneScore) + "-" + String(board!.playerTwoScore);
+                    winnerName.text = board!.winner!.name + " won";
                 }
-                if board.state == .TIE {
+                if board!.state == .TIE {
                     winnerName.text = "Draw";
                 }
                 return
@@ -109,8 +117,12 @@ class GameScreenController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if segue.destination is GameScreenController {
+            let vc = segue.destination as? GameScreenController
+            print("Hello 2")
+        }
     }
-    */
-    
+     
+      */
     
 }

@@ -71,6 +71,10 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" id="m56-Yx-buN"/>
+                    <connections>
+                        <outlet property="playerOneName" destination="vbE-vn-FxE" id="LgC-g8-05e"/>
+                        <outlet property="playerTwoName" destination="65y-q0-eYJ" id="YF5-Xe-3gl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -190,6 +194,8 @@
                         <outlet property="place7" destination="gJr-YG-Lu7" id="gqh-Dv-Vtz"/>
                         <outlet property="place8" destination="ZEw-Bx-aGl" id="V2Q-ON-PVP"/>
                         <outlet property="place9" destination="J8v-p9-YXg" id="bIu-15-ZXY"/>
+                        <outlet property="playerOneName" destination="6Dh-Sh-PSB" id="4yX-Ro-QFN"/>
+                        <outlet property="playerTwoName" destination="aZ1-Jg-8iL" id="Bmu-c8-p4D"/>
                         <outlet property="scoreLabel" destination="UmQ-bQ-P7Y" id="xEp-xz-6vV"/>
                         <outlet property="winnerName" destination="G7s-rm-qKn" id="yab-tC-am7"/>
                     </connections>
