@@ -23,6 +23,8 @@ class Board {
     var playerOneScore = 0;
     var playerTwoScore = 0;
     private var counter = 0;
+    var lastMoveX: Int?;
+    var lastMoveY: Int?;
     
     init(player1: Player, player2: Player) {
         self.player1 = player1;
@@ -48,10 +50,19 @@ class Board {
                 return false;
             }
             self.slots[positionX][positionY] = currentPlayer.sign;
+            lastMoveX = positionX;
+            lastMoveY = positionY;
             counter += 1;
             return true;
         }
         return false
+    }
+    
+    func undo() {
+        if (counter != 0 && state == .PLAYING) {
+            self.slots[lastMoveX!][lastMoveY!] = .NONE;
+            switchPlayer();
+        }
     }
     
     func checkResult() {
