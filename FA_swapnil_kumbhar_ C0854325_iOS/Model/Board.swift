@@ -22,7 +22,7 @@ class Board {
     var state: GAME_STATE;
     var playerOneScore = 0;
     var playerTwoScore = 0;
-    var var counter = 0;
+    var counter = 0;
     var lastMoveX: Int?;
     var lastMoveY: Int?;
     var isUndoAllowed = true;
