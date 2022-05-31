@@ -43,7 +43,6 @@ class ViewController: UIViewController {
             if let board = results.first {
                 switch type {
                 case "data_check":
-                    print("board found")
                     showSimpleAlert();
                 default:
                     let p1 = Player(name: board.player_one_name!, sign: .CRICLE)
@@ -62,6 +61,7 @@ class ViewController: UIViewController {
                     setSlot(b: oldBoard!, sign: board.slot22, x: 2, y: 2)
                     oldBoard!.playerOneScore = Int(board.player_one_score!) ?? 0
                     oldBoard!.playerTwoScore = Int(board.player_two_score!) ?? 0
+                    oldBoard!.counter = Int(board.counter)
                     if (board.current_player_sign == "cross") {
                         oldBoard!.currentPlayer = oldBoard!.player2
                     } else {
@@ -76,7 +76,6 @@ class ViewController: UIViewController {
     }
     
     func setSlot(b: Board, sign: String?, x: Int, y: Int) {
-        print(sign);
         if (sign != nil) {
             switch sign {
                 case "cross" : b.slots[x][y] = .CROSS

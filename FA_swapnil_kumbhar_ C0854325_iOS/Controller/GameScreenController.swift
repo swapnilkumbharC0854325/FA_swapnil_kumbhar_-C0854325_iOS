@@ -140,6 +140,7 @@ class GameScreenController: UIViewController {
         }
         boardDataEntity.setValue(String(board!.playerOneScore), forKey: "player_one_score")
         boardDataEntity.setValue(String(board!.playerTwoScore), forKey: "player_two_score")
+        boardDataEntity.setValue(board!.counter, forKey: "counter")
         let sign = self.board?.currentPlayer.sign;
         switch sign {
         case .CRICLE:
@@ -154,7 +155,6 @@ class GameScreenController: UIViewController {
     
     func setSlotData(x: Int, y: Int, boardDataEntity: NSManagedObject) {
         let sign = self.board?.slots[x][y];
-        print(String(x) + String(y))
         switch sign {
         case .CRICLE:
             boardDataEntity.setValue("circle", forKey: "slot" + String(x) + String(y))
