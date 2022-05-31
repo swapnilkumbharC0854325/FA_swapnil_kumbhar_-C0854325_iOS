@@ -142,3 +142,6 @@ class Board {
         }
     }
 }
+
+
+var boardData: [BoardData]?

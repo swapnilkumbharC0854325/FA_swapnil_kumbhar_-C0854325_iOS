@@ -63,7 +63,7 @@
                                     </attributedString>
                                 </state>
                                 <connections>
-                                    <segue destination="D9W-0t-ya0" kind="show" id="BBk-oD-MwI"/>
+                                    <segue destination="D9W-0t-ya0" kind="show" identifier="game_screen_segue" id="BBk-oD-MwI"/>
                                 </connections>
                             </button>
                         </subviews>

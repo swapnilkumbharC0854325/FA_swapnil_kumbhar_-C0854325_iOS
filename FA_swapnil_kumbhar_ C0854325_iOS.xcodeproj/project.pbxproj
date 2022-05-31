@@ -7,11 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5543E593284587AA00E24223 /* Data.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5543E591284587AA00E24223 /* Data.xcdatamodeld */; };
+		555285C92845A89900805E1F /* FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 555285C72845A89900805E1F /* FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld */; };
 		55A4B055284197E100941E1B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B054284197E100941E1B /* AppDelegate.swift */; };
 		55A4B057284197E100941E1B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B056284197E100941E1B /* SceneDelegate.swift */; };
 		55A4B059284197E100941E1B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B058284197E100941E1B /* ViewController.swift */; };
 		55A4B05C284197E100941E1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A4B05A284197E100941E1B /* Main.storyboard */; };
-		55A4B05F284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B05D284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld */; };
 		55A4B061284197E300941E1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55A4B060284197E300941E1B /* Assets.xcassets */; };
 		55A4B064284197E300941E1B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55A4B062284197E300941E1B /* LaunchScreen.storyboard */; };
 		55A4B0712841AF8800941E1B /* Board.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A4B0702841AF8800941E1B /* Board.swift */; };
@@ -21,12 +22,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5543E592284587AA00E24223 /* BoardData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BoardData.xcdatamodel; sourceTree = "<group>"; };
+		555285C82845A89900805E1F /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel; sourceTree = "<group>"; };
 		55A4B051284197E100941E1B /* FA_swapnil_kumbhar_ C0854325_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "FA_swapnil_kumbhar_ C0854325_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		55A4B054284197E100941E1B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55A4B056284197E100941E1B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		55A4B058284197E100941E1B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		55A4B05B284197E100941E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		55A4B05E284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel; sourceTree = "<group>"; };
 		55A4B060284197E300941E1B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55A4B063284197E300941E1B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55A4B065284197E300941E1B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		55A4B053284197E100941E1B /* FA_swapnil_kumbhar_ C0854325_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				555285C72845A89900805E1F /* FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld */,
 				55A4B06D2841989400941E1B /* Controller */,
 				55A4B06C2841988C00941E1B /* View */,
 				55A4B06B2841988300941E1B /* Model */,
@@ -73,7 +76,7 @@
 				55A4B056284197E100941E1B /* SceneDelegate.swift */,
 				55A4B060284197E300941E1B /* Assets.xcassets */,
 				55A4B065284197E300941E1B /* Info.plist */,
-				55A4B05D284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld */,
+				5543E591284587AA00E24223 /* Data.xcdatamodeld */,
 			);
 			path = "FA_swapnil_kumbhar_ C0854325_iOS";
 			sourceTree = "<group>";
@@ -177,9 +180,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55A4B05F284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld in Sources */,
+				5543E593284587AA00E24223 /* Data.xcdatamodeld in Sources */,
 				55A4B0752841B51E00941E1B /* GameScreenController.swift in Sources */,
 				55A4B059284197E100941E1B /* ViewController.swift in Sources */,
+				555285C92845A89900805E1F /* FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld in Sources */,
 				55A4B0712841AF8800941E1B /* Board.swift in Sources */,
 				55A4B055284197E100941E1B /* AppDelegate.swift in Sources */,
 				55A4B07F2841D84300941E1B /* SignView.swift in Sources */,
@@ -404,13 +408,23 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		55A4B05D284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld */ = {
+		5543E591284587AA00E24223 /* Data.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				55A4B05E284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */,
+				5543E592284587AA00E24223 /* BoardData.xcdatamodel */,
 			);
-			currentVersion = 55A4B05E284197E100941E1B /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */;
-			path = FA_swapnil_kumbhar__C0854325_iOS.xcdatamodeld;
+			currentVersion = 5543E592284587AA00E24223 /* BoardData.xcdatamodel */;
+			path = Data.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		555285C72845A89900805E1F /* FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				555285C82845A89900805E1F /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */,
+			);
+			currentVersion = 555285C82845A89900805E1F /* FA_swapnil_kumbhar__C0854325_iOS.xcdatamodel */;
+			path = FA_swapnil_kumbhar_C0854325_iOS.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
