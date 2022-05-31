@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="BoardData" representedClassName="BoardData" syncable="YES" codeGenerationType="class">
+        <attribute name="current_player_sign" optional="YES" attributeType="String"/>
+        <attribute name="player_one_name" optional="YES" attributeType="String"/>
+        <attribute name="player_one_score" optional="YES" attributeType="String"/>
+        <attribute name="player_two_name" optional="YES" attributeType="String"/>
+        <attribute name="player_two_score" optional="YES" attributeType="String"/>
+        <attribute name="slot00" optional="YES" attributeType="String"/>
+        <attribute name="slot01" optional="YES" attributeType="String"/>
+        <attribute name="slot02" optional="YES" attributeType="String"/>
+        <attribute name="slot10" optional="YES" attributeType="String"/>
+        <attribute name="slot11" optional="YES" attributeType="String"/>
+        <attribute name="slot12" optional="YES" attributeType="String"/>
+        <attribute name="slot20" optional="YES" attributeType="String"/>
+        <attribute name="slot21" optional="YES" attributeType="String"/>
+        <attribute name="slot22" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="BoardData" positionX="-63" positionY="-18" width="128" height="239"/>
+    </elements>
+</model>
